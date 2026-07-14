@@ -5,36 +5,154 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>คู่มือคนรักแมวเหมียว</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 25px;
+            background-color: #fcfcfc;
+        }
+
+        .main-container {
+            border: 2px solid #2c3e50;
+            border-radius: 12px;
+            padding: 30px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .category-box {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            background-color: #fafbfc;
+        }
+
+        .breed-box {
+            border-left: 4px solid #34495e;
+            background-color: #f1f2f6;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            color: #2c3e50;
+            text-align: center;
+            margin-top: 0;
+            padding-bottom: 15px;
+            border-bottom: 3px double #2c3e50;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #2980b9;
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+        }
+        h2::before {
+            
+            margin-right: 10px;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            color: #27ae60;
+            margin-top: 0; 
+        }
+
+        h4 {
+            font-size: 1.25rem;
+            color: #d35400;
+            margin: 5px 0 10px 0;
+        }
+
+        h5 {
+            font-size: 1.1rem;
+            color: #8e44ad;
+            background-color: #f4ecf7;
+            padding: 6px 12px;
+            border-radius: 4px;
+            display: inline-block;
+            margin: 15px 0 5px 0;
+        }
+
+        h6 {
+            font-size: 0.95rem;
+            color: #7f8c8d;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 10px 0 5px 0;
+            border-bottom: 1px dashed #bdc3c7;
+            padding-bottom: 3px;
+        }
+
+        p {
+            margin: 8px 0;
+            color: #555;
+        }
+
+        img {
+            display: block;
+            max-width: 280px; 
+            width: 100%;
+            height: auto;
+            margin: 15px 0;
+            border: 3px solid #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>คู่มือคนรักแมวเหมียว</h1>
-        <p>แมวเป็นสัตว์เลี้ยงที่ได้รับความนิยมอย่างมากทั่วโลก ด้วยนิสัยที่น่ารัก ขี้อ้อน และมีความเป็นตัวของตัวเองสูง</p>
+    <div class="main-container">
+
+        <h1>คู่มือคนรักแมวเหมียว</h1>
+        <p style="text-align: center; font-style: italic;">แมวเป็นสัตว์เลี้ยงที่ได้รับความนิยมอย่างมากทั่วโลก ด้วยนิสัยที่น่ารัก ขี้อ้อน และมีความเป็นตัวของตัวเองสูง</p>
 
         <h2>สายพันธุ์แมวที่น่าสนใจ</h2>
-            <p>บนโลกนี้มีแมวหลากหลายสายพันธุ์ให้เลือกเลี้ยง แต่ละสายพันธุ์ก็มีเอกลักษณ์และนิสัยที่แตกต่างกันออกไป</p>
+        <p>บนโลกนี้มีแมวหลากหลายสายพันธุ์ให้เลือกเลี้ยง แต่ละสายพันธุ์ก็มีเอกลักษณ์และนิสัยที่แตกต่างกันออกไป</p>
 
+        <div class="category-box">
             <h3>แมวสายพันธุ์ต่างประเทศ</h3>
-                <p>กลุ่มแมวที่มีต้นกำเนิดจากต่างแดน มักจะมีลักษณะขนและรูปร่างที่โดดเด่น</p>
+            <p>กลุ่มแมวที่มีต้นกำเนิดจากต่างแดน มักจะมีลักษณะขนและรูปร่างที่โดดเด่น</p>
 
+            <div class="breed-box">
                 <h4>แมวเปอร์เซีย</h4>
-                    <p>แมวขนยาว หน้าบี้ มีนิสัยสงบและเรียบร้อย เหมาะสำหรับการเลี้ยงในระบบปิด</p>
+                <p>แมวขนยาว หน้าบี้ มีนิสัยสงบและเรียบร้อย เหมาะสำหรับการเลี้ยงในระบบปิด</p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/White_Persian_Cat.jpg" alt="แมวเปอร์เซียขนยาว">
 
-                    <h5>การดูแลรักษาความสะอาด</h5>
-                        <p>เนื่องจากมีขนยาว ผู้เลี้ยงจึงต้องใส่ใจเรื่องความสะอาดเป็นพิเศษ</p>
+                <h5>การดูแลรักษาความสะอาด</h5>
+                <p>เนื่องจากมีขนยาว ผู้เลี้ยงจึงต้องใส่ใจเรื่องความสะอาดเป็นพิเศษ</p>
 
-                        <h6>อุปกรณ์สำหรับแปรงขน</h6>
-                            <p>ควรใช้หวีซี่ห่างหรือแปรงสลิกเกอร์ในการสางขนที่พันกันออกอย่างเบามือทุกวัน</p>
+                <h6>อุปกรณ์สำหรับแปรงขน</h6>
+                <p>ควรใช้หวีซี่ห่างหรือแปรงสลิกเกอร์ในการสางขนที่พันกันออกอย่างเบามือทุกวัน</p>
+            </div>
+        </div>
 
+        <div class="category-box">
             <h3>แมวสายพันธุ์ไทย</h3>
-                <p>แมวไทยมีชื่อเสียงในระดับโลกในเรื่องของความฉลาด ปราดเปรียว และสีสันที่เป็นเอกลักษณ์</p>
+            <p>แมวไทยมีชื่อเสียงในระดับโลกในเรื่องของความฉลาด ปราดเปรียว และสีสันที่เป็นเอกลักษณ์</p>
 
+            <div class="breed-box">
                 <h4>แมววิเชียรมาศ</h4>
-                    <p>แมวที่มีแต้มสีเข้มตามจุดต่างๆ ของร่างกาย เช่น หน้า หู หาง และเท้า ทั้งหมด 9 ตำแหน่ง</p>
+                <p>แมวที่มีแต้มสีเข้มตามจุดต่างๆ ของร่างกาย เช่น หน้า หู หาง และเท้า ทั้งหมด 9 ตำแหน่ง</p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/25/Siam_lilacpoint.jpg" alt="แมววิเชียรมาศ">
 
-                    <h5>ความเชื่อของคนโบราณ</h5>
-                        <p>คนสมัยก่อนในยุคกรุงศรีอยุธยาเชื่อว่า หากใครเลี้ยงแมววิเชียรมาศจะนำโชคลาภและทรัพย์สินมาให้แก่เจ้าของ</p>
+                <h5>ความเชื่อของคนโบราณ</h5>
+                <p>คนสมัยก่อนในยุคกรุงศรีอยุธยาเชื่อว่า หากใครเลี้ยงแมววิเชียรมาศจะนำโชคลาภและทรัพย์สินมาให้แก่เจ้าของ</p>
+            </div>
+        </div>
+
+    </div>
 
 </body>
 
