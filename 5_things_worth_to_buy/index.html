@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>5 Things Worth to Buy</title>
+    <title>5 Gadgets and Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Noto Sans Thai', sans-serif;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #e0f7f4 0%, #e8f5ff 100%);
+            background: #e0f7f4;
             padding: 40px 20px;
             min-height: 100vh;
         }
@@ -23,18 +26,16 @@
             margin: 0 auto;
         }
 
-        /* Bento Grid Layout */
-        .bento-grid {
+        .table-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 24px;
             margin-top: 30px;
         }
 
-        /* Header Card - Full Width */
         .card-header {
             grid-column: 1 / -1;
-            background: linear-gradient(135deg, #00838f 0%, #006064 100%);
+            background: #00838f;
             color: white;
             padding: 50px 40px;
             border-radius: 20px;
@@ -53,6 +54,8 @@
             opacity: 0.95;
             font-weight: 300;
         }
+
+        .card-header p:last-of-type { display: none; }
 
         /* List Card */
         .card-list {
@@ -87,8 +90,13 @@
             padding-left: 30px;
         }
 
+        .card-list a {
+            color: #2c3e50;
+            text-decoration: none;
+        }
+
         .card-list li:before {
-            content: "✓";
+         
             position: absolute;
             left: 0;
             color: #00838f;
@@ -104,12 +112,13 @@
             box-shadow: 0 4px 16px rgba(0, 131, 143, 0.15);
             display: flex;
             flex-direction: column;
+            scroll-margin-top: 20px;
         }
 
         .card-image-wrapper {
             width: 100%;
             height: 200px;
-            background: linear-gradient(135deg, #00838f 0%, #006064 100%);
+            background: #00838f;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -120,12 +129,14 @@
             width: 140px;
             height: 140px;
             border-radius: 50%;
-            background: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4em;
+            object-fit: cover;
+            border: 5px solid white;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        #disney-plus .card-feature:first-of-type { font-size: 0; }
+        #disney-plus .card-feature:first-of-type::after {
+            content: "Movies and Series";
+            font-size: 0.9rem;
         }
 
         .card-content {
@@ -163,13 +174,15 @@
         .card-feature:before {
             content: "•";
             color: #00838f;
-            font-size: 1.2em;
+            font-size: 1.2rem;
             font-weight: bold;
         }
 
+        .card-feature::before { content: "\2022"; }
+
         /* Responsive Design */
         @media (max-width: 768px) {
-            .bento-grid {
+            .table-grid {
                 grid-template-columns: 1fr;
                 gap: 20px;
             }
@@ -189,90 +202,89 @@
 
     </style>
 </head>
+
+
 <body>
     <div class="container">
-        <div class="bento-grid">
-            
-            <!-- Header Card -->
+        <div class="table-grid">
+
             <div class="card-header">
-                <h1>5 Things Worth to Buy</h1>
-                <p>Discover the essentials that can improve your daily life</p>
+                <h1>5 Gadgets and Services</h1>
+                <p>Technology and subscriptions for work and entertainment.</p>
+                <p>5 สิ่ง ที่คุ้มค่าที่จะซื้อในปี 2026</p>
             </div>
 
-            <!-- List Card -->
+
             <div class="card-list">
-                <h2>Why These Items?</h2>
+                <h2>Contents</h2>
                 <ul>
-                    <li>Premium Quality Materials</li>
-                    <li>Long-lasting Durability</li>
-                    <li>Great Value for Money</li>
-                    <li>Improves Daily Routine</li>
-                    <li>Recommended by Experts</li>
+                    <li><a href="#x200u">Vivo X200 Ultra</a></li>
+                    <li><a href="#sony-wf-1000xm6">Sony WF-1000XM6</a></li>
+                    <li><a href="#disney-plus">Disney+</a></li>
+                    <li><a href="#claude-max">Claude Max</a></li>
+                    <li><a href="#apple-music">Apple Music</a></li>
                 </ul>
             </div>
 
-            <!-- Item Card 1 -->
-            <div class="card-item">
+            <div class="card-item" id="x200u">
                 <div class="card-image-wrapper">
-                    <div class="card-image">☕</div>
+                    <img class="card-image" src="x200u.jpg" alt="Vivo X200 Ultra">
                 </div>
                 <div class="card-content">
-                    <h3>Premium Coffee Maker</h3>
-                    <p>Start your morning with a perfect cup of coffee. This high-quality coffee maker ensures rich flavor extraction.</p>
-                    <div class="card-feature">Fast Brewing</div>
-                    <div class="card-feature">Energy Efficient</div>
+                    <h3>Vivo X200 Ultra</h3>
+                    <p>สมาร์ตโฟนเรือธง กล้องสวยและทำงานได้รวดเร็ว</p>
+                    <div class="card-feature">Advanced Camera</div>
+                    <div class="card-feature">Powerful Performance</div>
                 </div>
             </div>
 
-            <!-- Item Card 2 -->
-            <div class="card-item">
+
+            <div class="card-item" id="sony-wf-1000xm6">
                 <div class="card-image-wrapper">
-                    <div class="card-image">🎧</div>
+                    <img class="card-image" src="sonywf1000xm6.jpg" alt="Sony WF-1000XM6">
                 </div>
                 <div class="card-content">
-                    <h3>Wireless Headphones</h3>
-                    <p>Experience crystal-clear sound quality with noise cancellation technology. Perfect for work or entertainment.</p>
-                    <div class="card-feature">30-hour Battery</div>
+                    <h3>Sony WF-1000XM6</h3>
+                    <p>หูฟังไร้สาย เสียงคมชัดและตัดเสียงรบกวนได้ดี</p>
+                    <div class="card-feature">Noise Cancellation</div>
                     <div class="card-feature">Comfortable Fit</div>
                 </div>
             </div>
 
-            <!-- Item Card 3 -->
-            <div class="card-item">
+
+            <div class="card-item" id="disney-plus">
                 <div class="card-image-wrapper">
-                    <div class="card-image">📱</div>
+                    <img class="card-image" src="disneyplus.jpg" alt="Disney Plus">
                 </div>
                 <div class="card-content">
-                    <h3>Phone Stand</h3>
-                    <p>Keep your phone at the perfect angle for video calls, streaming, or content creation. Adjustable and sturdy.</p>
+                    <h3>Disney+</h3>
+                    <p>บริการสตรีมมิง รวมภาพยนตร์และซีรีส์สำหรับทุกคน</p>
                     <div class="card-feature">360° Rotation</div>
-                    <div class="card-feature">Non-Slip Base</div>
+                    <div class="card-feature">Multiple Devices</div>
                 </div>
             </div>
 
-            <!-- Item Card 4 -->
-            <div class="card-item">
+
+            <div class="card-item" id="claude-max">
                 <div class="card-image-wrapper">
-                    <div class="card-image">🌿</div>
+                    <img class="card-image" src="claudemax.jpg" alt="Claude Max">
                 </div>
                 <div class="card-content">
-                    <h3>Desk Plant</h3>
-                    <p>Brighten your workspace with a beautiful desk plant. Improves air quality and boosts productivity and mood.</p>
-                    <div class="card-feature">Low Maintenance</div>
-                    <div class="card-feature">Air Purifying</div>
+                    <h3>Claude Max</h3>
+                    <p>ผู้ช่วย AI สำหรับเขียนงาน เรียน และเขียนโค้ด</p>
+                    <div class="card-feature">AI Assistance</div>
+                    <div class="card-feature">Higher Usage</div>
                 </div>
             </div>
-
-            <!-- Item Card 5 -->
-            <div class="card-item">
+            <div class="card-item" id="apple-music">
                 <div class="card-image-wrapper">
-                    <div class="card-image">💡</div>
+                    <img class="card-image" src="applemusic.jpg" alt="Apple Music">
                 </div>
                 <div class="card-content">
-                    <h3>LED Desk Lamp</h3>
-                    <p>Reduce eye strain with adjustable lighting. Perfect for reading, working, or studying with various brightness levels.</p>
-                    <div class="card-feature">USB Charging Port</div>
-                    <div class="card-feature">Dimmable Light</div>
+                    <h3>Apple Music</h3>
+                    <p>บริการฟังเพลงออนไลน์ พร้อมเพลงและเพลย์ลิสต์มากมาย</p>
+                    <div class="card-feature">Large Music Library</div>
+                    <div class="card-feature">Offline Listening</div>
                 </div>
             </div>
 
