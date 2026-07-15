@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 Things Worth to Buy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #e0f7f4 0%, #e8f5ff 100%);
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Bento Grid Layout */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 30px;
+        }
+
+        /* Header Card - Full Width */
+        .card-header {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, #00838f 0%, #006064 100%);
+            color: white;
+            padding: 50px 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 24px rgba(0, 131, 143, 0.3);
+            text-align: center;
+        }
+
+        .card-header h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .card-header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        /* List Card */
+        .card-list {
+            grid-column: 1 / -1;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 4px 16px rgba(0, 131, 143, 0.15);
+        }
+
+        .card-list h2 {
+            color: #00838f;
+            margin-bottom: 25px;
+            font-size: 1.8em;
+            border-left: 5px solid #00838f;
+            padding-left: 15px;
+        }
+
+        .card-list ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .card-list li {
+            padding: 12px 0;
+            font-size: 1.05em;
+            color: #2c3e50;
+            border-bottom: 2px solid #e0f7f4;
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .card-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #00838f;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        /* Item Cards */
+        .card-item {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0, 131, 143, 0.15);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-image-wrapper {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #00838f 0%, #006064 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .card-image {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4em;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-content {
+            padding: 30px 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-item h3 {
+            color: #00838f;
+            font-size: 1.5em;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .card-item p {
+            color: #555;
+            line-height: 1.6;
+            font-size: 0.95em;
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+
+        .card-feature {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 0;
+            color: #006064;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+
+        .card-feature:before {
+            content: "•";
+            color: #00838f;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .bento-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .card-header h1 {
+                font-size: 2em;
+            }
+
+            .card-header {
+                padding: 40px 30px;
+            }
+
+            .card-list ul {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="bento-grid">
+            
+            <!-- Header Card -->
+            <div class="card-header">
+                <h1>5 Things Worth to Buy</h1>
+                <p>Discover the essentials that can improve your daily life</p>
+            </div>
+
+            <!-- List Card -->
+            <div class="card-list">
+                <h2>Why These Items?</h2>
+                <ul>
+                    <li>Premium Quality Materials</li>
+                    <li>Long-lasting Durability</li>
+                    <li>Great Value for Money</li>
+                    <li>Improves Daily Routine</li>
+                    <li>Recommended by Experts</li>
+                </ul>
+            </div>
+
+            <!-- Item Card 1 -->
+            <div class="card-item">
+                <div class="card-image-wrapper">
+                    <div class="card-image">☕</div>
+                </div>
+                <div class="card-content">
+                    <h3>Premium Coffee Maker</h3>
+                    <p>Start your morning with a perfect cup of coffee. This high-quality coffee maker ensures rich flavor extraction.</p>
+                    <div class="card-feature">Fast Brewing</div>
+                    <div class="card-feature">Energy Efficient</div>
+                </div>
+            </div>
+
+            <!-- Item Card 2 -->
+            <div class="card-item">
+                <div class="card-image-wrapper">
+                    <div class="card-image">🎧</div>
+                </div>
+                <div class="card-content">
+                    <h3>Wireless Headphones</h3>
+                    <p>Experience crystal-clear sound quality with noise cancellation technology. Perfect for work or entertainment.</p>
+                    <div class="card-feature">30-hour Battery</div>
+                    <div class="card-feature">Comfortable Fit</div>
+                </div>
+            </div>
+
+            <!-- Item Card 3 -->
+            <div class="card-item">
+                <div class="card-image-wrapper">
+                    <div class="card-image">📱</div>
+                </div>
+                <div class="card-content">
+                    <h3>Phone Stand</h3>
+                    <p>Keep your phone at the perfect angle for video calls, streaming, or content creation. Adjustable and sturdy.</p>
+                    <div class="card-feature">360° Rotation</div>
+                    <div class="card-feature">Non-Slip Base</div>
+                </div>
+            </div>
+
+            <!-- Item Card 4 -->
+            <div class="card-item">
+                <div class="card-image-wrapper">
+                    <div class="card-image">🌿</div>
+                </div>
+                <div class="card-content">
+                    <h3>Desk Plant</h3>
+                    <p>Brighten your workspace with a beautiful desk plant. Improves air quality and boosts productivity and mood.</p>
+                    <div class="card-feature">Low Maintenance</div>
+                    <div class="card-feature">Air Purifying</div>
+                </div>
+            </div>
+
+            <!-- Item Card 5 -->
+            <div class="card-item">
+                <div class="card-image-wrapper">
+                    <div class="card-image">💡</div>
+                </div>
+                <div class="card-content">
+                    <h3>LED Desk Lamp</h3>
+                    <p>Reduce eye strain with adjustable lighting. Perfect for reading, working, or studying with various brightness levels.</p>
+                    <div class="card-feature">USB Charging Port</div>
+                    <div class="card-feature">Dimmable Light</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
