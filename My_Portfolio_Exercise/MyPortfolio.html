@@ -16,13 +16,16 @@
             width: 90%;
         }
 
-        header {
+        header, footer {
+            width: 90%;
+            max-width: 1000px;
+            box-sizing: border-box;
             background: #0b6cb8;
             color: white;
             text-align: center;
             padding: 24px;
             border-radius: 20px;
-            margin: 28px ;
+            margin: 28px auto;
         }
 
         img {
@@ -36,6 +39,7 @@
             background: white;
             width: 90%;
             max-width: 1000px;
+            box-sizing: border-box;
             margin: 20px auto;
             padding: 20px;
             border-radius: 20px;
@@ -48,14 +52,44 @@
             padding-bottom: 5px;
         }
 
-        footer {
-            text-align: center;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
             background: #0b6cb8;
             color: white;
-            padding: 24px;
-            margin: 28px;
-            border-radius: 20px;
+        }
 
+        .award-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .award-list li {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin: 14px 0;
+        }
+
+        .award-list img {
+            width: 120px;
+            height: 80px;
+            border: none;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        footer {
+            margin-top: 28px;
         }
 
         a {
@@ -109,33 +143,70 @@
 
     <section>
         <h2>Education</h2>
-        <ol>
-            <li>
-                Diploma (Industrial Electronics)
-                <br>
-                Lampang Technical College
-                <br>
-                GPA 3.93
-            </li>
-            <li>
-                Vocational Certificate (Electronics)
-                <br>
-                Lampang Technical College
-                <br>
-                GPA 3.90
-            </li>
-        </ol>
+        <table>
+            <thead>
+                <tr>
+                    <th>Graduation</th>
+                    <th>Qualification</th>
+                    <th>Institution</th>
+                    <th>GPA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>03/2019</td>
+                    <td>Diploma in Industrial Electronics</td>
+                    <td>Lampang Technical College</td>
+                    <td>3.93</td>
+                </tr>
+                <tr>
+                    <td>03/2017</td>
+                    <td>Vocational Certificate in Electronics</td>
+                    <td>Lampang Technical College</td>
+                    <td>3.90</td>
+                </tr>
+            </tbody>
+        </table>
     </section>
 
     <section>
         <h2>Work Experience</h2>
-        <ul>
-            <li>Freelance IoT Developer (2022 - Present)</li>
-            <li>IT Technician - One Stop Service (AIA)</li>
-            <li>Technical Support - Kantana Organization</li>
-            <li>Electrical Maintenance Internship - EGAT</li>
-            <li>Junior Tour Guide - EGAT Mae Moh</li>
-        </ul>
+        <table>
+            <thead>
+                <tr>
+                    <th>Period</th>
+                    <th>Position</th>
+                    <th>Company</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>02/2022 - Present</td>
+                    <td>Freelance IoT Developer</td>
+                    <td>Fastwork (Freelancer)</td>
+                </tr>
+                <tr>
+                    <td>01/2020 - 05/2021</td>
+                    <td>IT Technician</td>
+                    <td>One Stop Service - AIA Surawong HQ</td>
+                </tr>
+                <tr>
+                    <td>06/2019 - 12/2019</td>
+                    <td>Technical Support / Event Support</td>
+                    <td>Kantana Organization & Management</td>
+                </tr>
+                <tr>
+                    <td>02/2018 - 04/2018</td>
+                    <td>Electrical Maintenance Internship</td>
+                    <td>EGAT Mae Moh</td>
+                </tr>
+                <tr>
+                    <td>03/2013 - 03/2018</td>
+                    <td>Junior Tour Guide</td>
+                    <td>EGAT Mae Moh</td>
+                </tr>
+            </tbody>
+        </table>
     </section>
 
     <section>
@@ -190,12 +261,27 @@
     <section>
 
         <h2>Awards</h2>
-        <ul>
-            <li>3rd Place - ThaiSFTT IoT Programming Competition (2020)</li>
-            <li>Royal Award - 2nd Place (2018)</li>
-            <li>Thailand - Korea Electronics & IoT Workshop (2018)</li>
-            <li>1st Prize - RRR Award (2016)</li>
-            <li>Top 10 Thailand Exchange Student Representative (2016)</li>
+        <ul class="award-list">
+            <li>
+                <img src="thaifstt.png" alt="ThaiSFTT IoT Programming Competition award">
+                <span>3rd Place - ThaiSFTT IoT Programming Competition (2020)</span>
+            </li>
+            <li>
+                <img src="royal.png" alt="Royal Award for KidsAlarm">
+                <span>Royal Award - Runner-up for KidsAlarm (Gen 2 with AI Integration), Junior Inventor VEC Thailand (2018)</span>
+            </li>
+            <li>
+                <img src="iotkorea.png" alt="Thailand Korea Electronics and IoT Workshop">
+                <span>Thailand - Korea Electronics &amp; IoT Workshop (2018)</span>
+            </li>
+            <li>
+                <img src="rrraward.png" alt="RRR Award">
+                <span>1st Prize - RRR Award (2016)</span>
+            </li>
+            <li>
+                <img src="seameo.png" alt="Thailand Exchange Student Representative">
+                <span>Top 10 Thailand Exchange Student Representative (2016)</span>
+            </li>
         </ul>
     </section>
 
@@ -211,23 +297,20 @@
 
 
     <section>
-            <h3>Career Goal</h3>
-                <p>To become a professional Embedded Systems and IT Engineer in Germany.</p>
+        <h2>Career Goal</h2>
+        <p>
+            My goal is to grow as an Embedded Systems and IoT Engineer, creating
+            practical products that connect reliable hardware with useful software.
+            I am also interested in opportunities to work and develop my career in Germany.
+        </p>
 
-                <h4>Favorite Technology</h4>
-                    <p>Raspberry Pi and ESP32</p>
-
-                    <h5>Favorite IDE</h5>
-
-                        <h6>Antigravity</h6>
-                        <p>from Google</p>
-
-                        <h6>Visual Studio Code</h6>
-                        <p>from Microsoft, USA</p>
-                    
-
-                        <h6>Thank you for visiting my portfolio.</h6>
-
+        <h3>Professional Focus</h3>
+        <ul>
+            <li>Develop IoT prototypes with Raspberry Pi, ESP32, and microcontrollers</li>
+            <li>Build web and mobile applications for monitoring and control systems</li>
+            <li>Design, test, and improve electronic circuits and PCBs</li>
+            <li>Use automation to solve practical IT and customer problems</li>
+        </ul>
     </section>
 
     <section>
@@ -238,6 +321,8 @@
             <a href="https://github.com/Thenateraider" target="_blank">GitHub</a>
             |
             <a href="mailto:thenateraider@gmail.com">Email</a>
+            |
+            <a href="https://instagram.com/ctrlaltnate_">Instagram</a>
         </p>
     </section>
 
