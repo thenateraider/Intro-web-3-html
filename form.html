@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deutschessen-Döner</title>
+</head>
+<body>
+    <h1>Deutschessen-Döner</h1>
+    <p>Hier bestellen</p>
+
+    <form action="/api/order" method="GET">
+        <br />
+        <p>Namen</p>
+
+        <label>Geben Sie Ihren Namen ein :
+            <input type="text" name="customerName" required/>
+        </label>
+
+        <br />
+        <br />
+
+        <p>Wählen Sie Ihr Fleisch :</p>
+
+
+        
+        <label>
+            <input type="radio" name="fleisch" value="schwein" checked />
+            Schweinefleisch
+        </label>
+        <label>
+            <input type="radio" name="fleisch" value="huhn" />
+            Hühnerfleisch
+        </label>
+        <label>
+            <input type="radio" name="fleisch" value="rind" />
+            Rindfleisch
+        </label>
+
+        <br />
+        <br />
+
+        <p>Wähle deine Beläge :</p>
+        <label>
+            <input type="checkbox" name="addons" value="kopfsalat" />
+            Kopfsalat
+        </label>
+        <label>
+            <input type="checkbox" name="addons" value="zwiebeln" />
+            Zwiebeln
+        </label>
+        <label>
+            <input type="checkbox" name="addons" value="karotte"/>
+            Karotte
+        </label>
+        <br/>
+        <br/>
+        <button type="submit">Bestellen</button>
+    </form>
+</body>
+</html>

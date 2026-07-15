@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NateKino Membership</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #171717;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            width: 320px;
+            padding: 30px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        h1 {
+            margin-top: 0;
+            margin-bottom: 5px;
+            text-align: center;
+            color: #b00020;
+        }
+
+        .subtitle {
+            margin-top: 0;
+            text-align: center;
+            color: #666;
+        }
+
+        .text-input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .option {
+            display: block;
+            margin: 8px 0;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            background-color: #b00020;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>NateKino</h1>
+        <p class="subtitle">Create your movie membership</p>
+
+        <form action="/api/" method="POST">
+            <p>
+                <label for="username">Username:</label>
+                <input class="text-input" type="text" id="username" name="username"
+                    placeholder="Enter your username" required>
+            </p>
+
+            <p>
+                <label for="password">Password:</label>
+                <input class="text-input" type="password" id="password" name="password"
+                    placeholder="Enter your password" required>
+            </p>
+
+            <p>
+                <label for="email">Email:</label>
+                <input class="text-input" type="email" id="email" name="email"
+                    placeholder="Enter your email" required>
+            </p>
+
+            <p>Choose your membership:</p>
+
+            <label class="option">
+                <input type="radio" name="package" value="free" required>
+                Free
+            </label>
+
+            <label class="option">
+                <input type="radio" name="package" value="premium">
+                Premium
+            </label>
+
+            <p>Select your favorite movie genres:</p>
+
+            <label class="option">
+                <input type="checkbox" name="genres" value="action">
+                Action
+            </label>
+
+            <label class="option">
+                <input type="checkbox" name="genres" value="comedy">
+                Comedy
+            </label>
+
+            <label class="option">
+                <input type="checkbox" name="genres" value="horror">
+                Horror
+            </label>
+
+            <label class="option">
+                <input type="checkbox" name="genres" value="drama">
+                Drama
+            </label>
+
+            <label class="option">
+                <input type="checkbox" name="genres" value="romance">
+                Romance
+            </label>
+
+            <label class="option">
+                <input type="checkbox" name="genres" value="science-fiction">
+                Science Fiction
+            </label>
+
+            <label class="option">
+                <input type="checkbox" name="genres" value="animation">
+                Animation
+            </label>
+
+            <label class="option">
+                <input type="checkbox" name="genres" value="documentary">
+                Documentary
+            </label>
+
+            <p>
+                <button type="submit">Register Now</button>
+            </p>
+        </form>
+    </div>
+</body>
+</html>
